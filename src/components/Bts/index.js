@@ -1,25 +1,22 @@
-import React from 'react'; // para crear u estato se importa useState
+import React from 'react';
+import PropTypes from 'prop-types';
+//styles
+import { Wrapper, Content, Text } from './bts.styles';
 
-//hoots
-import useBts from '../../Hooks/useBts';
+const Bts= ({image,title,text}) => (
+    <Wrapper image={image}>
+        <Content>
+            <Text>
+                <h1>BTS</h1>
+                <p> {text}</p>
+            </Text>
+        </Content>
+    </Wrapper>
 
-
- const Bts = () => {
-    const bts=useBts();
-
-    return(
-        <div>
-            <h1>HOLA MUNDO</h1>
-            <ul>
-                {
-                    bts.map(item =>(
-                        <li key={item.id}>{item.member}-{item.quote}</li>
-                    ))
-                }
-            </ul>
-        </div>
-    );
-
-};
-
+);
+ Bts.propTypes = {   
+    image:PropTypes.string,
+    title:PropTypes.string,
+    Text:PropTypes.string
+ };
 export default Bts;

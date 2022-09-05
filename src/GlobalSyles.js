@@ -3,6 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 //aaqui se escribe el estilo CSS
 export const GlobalStyle =createGlobalStyle`
     :root{
+        background-image: url(https://fondosmil.com/fondo/5284.jpg);
         --maxWidth:1280px;
         --white:#fff;
         --lightGrey:#eee;

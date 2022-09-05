@@ -2,7 +2,7 @@ import { useState,useEffect,useRef} from 'react';
 
 
 
-const useBts = () =>{
+export const useBts = () =>{
   
   const [bts,setBts]=useState([]);
 
@@ -18,5 +18,3 @@ const useBts = () =>{
  }
  return bts;
 };
-
-export default useBts;

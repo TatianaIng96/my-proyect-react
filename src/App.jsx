@@ -2,15 +2,20 @@
 //Routing
 import { BrowserRouter as Router,Routes,Route} from 'react-router-dom';
 import React from 'react';
-import Bts from './components/Bts';
+import Home from './components/Home';
 import { GlobalStyle } from './GlobalSyles';
 
 export default function App() {
   return (
-    <Router>
-      <Bts />
-    <GlobalStyle/>
-    </Router>
+    <div>
+      <Router>
+        <Routes>
+          <Route path='/' element={<Home/>} />
+        </Routes>
+        <GlobalStyle/>
+      </Router>
+    </div>
+   
     
   )  
   
