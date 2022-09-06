@@ -3,6 +3,9 @@ import fondo from '../images/tany.jpg'
 //hoots
 import {useBts} from '../Hooks/useBts'
 import Bts from './Bts';
+import Grid from './Grid'
+import Member from './Member'
+import kpop from '../kpop';
 
  const Home = () => {
     const bts=useBts();
@@ -11,14 +14,20 @@ import Bts from './Bts';
         <>
             <Bts image={`${fondo}`}>
             </Bts>
-            <h1>HOLA MUNDO</h1>
-            <ul>
-                {
-                    bts.map(item =>(
-                        <li key={item.id}>{item.member}-{item.quote}</li>
-                    ))
-                }
-            </ul>
+            <h1>Bangtan Sonyeondan (BTS) </h1>
+            <Grid header='Miembros de la banda'>
+            {kpop.map(member => (
+                    <Member
+                        key={member.id}
+                        clickable
+                        member_id={member.id}
+                        name={member.name}
+                        character={member.character}
+                        imageUrl={`${member.imageUrl}`}
+                    />
+                
+            ))}
+            </Grid>
         </>
     );
 
